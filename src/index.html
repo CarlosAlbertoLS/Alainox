@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Alainox</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--index-->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!--portafolio-->
+  <link rel="icon" type="image/svg+xml" href="assets/media/logo1.png">
+  <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
+  <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
+  <link rel="stylesheet" href="assets/css/urku.css">
+</head>
+<body>
+  <app-root></app-root>
+  <!--index-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script>
+      $(window).scroll(function() {
+          if ($(document).scrollTop() > 50) {
+              $('.nav').addClass('affix');
+              console.log("OK");
+          } else {
+              $('.nav').removeClass('affix');
+          }
+      });
+  </script>
+  <!--portafolio-->
+  <script src="./assets/js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+</body>
+</html>

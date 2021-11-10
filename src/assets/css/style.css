@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+}
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+
+.nav {
+    width: 100%;
+    height: 65px;
+    padding-bottom: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    z-index: 100000;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a img {
+    background-image: none;
+    filter: drop-shadow(0 0 5px #fff);
+    border: none;
+    width: 300px;
+    height: 65px;
+    transition: all 0.4s ease;
+}
+
+.nav div.logo a img:hover {
+    filter: drop-shadow(0 0 10px #fff);
+    transition: all 0.4s ease;
+}
+
+
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #000;
+    line-height: 65px;
+    font-size: 2rem;
+    filter: drop-shadow(0 0 10px #fff);
+    transition: all 0.4s ease;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #24BEEF;
+    filter: drop-shadow(0 0 20px #000);
+    transition: all 0.4s ease;
+}
+
+/* Banner section */
+.banner{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    /*padding-top: 65px;*/
+    background-color: rgba(63, 60, 60, 0.479);
+    background-size: cover;
+    background-position: center top;
+    transition: all 1.5s ease-in-out;
+    background-image: url('../media/slide1.jpg');
+    animation: banner 40s infinite linear;
+    z-index: 1;
+}
+.banner-content{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(125, 131, 129, 0.637);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner-content h1{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    font-size: 35px;
+    text-align: center;
+}
+.banner-content a{
+    text-decoration: none;
+    padding: 9px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+}
+.banner-content a:nth-child(2){
+    background-color: rgb(224, 30, 30);
+}
+.banner-content a:nth-child(3){
+    background-color: rgb(33, 138, 236);
+}
+.banner-content a:hover{
+    background-color: #fff;
+    color: #333;
+}
+@keyframes banner{
+    0%{
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        background-image: url('../media/slide1.jpg');
+        background-position: center top;
+    }
+    25%{
+        background-image: url('../media/slide1.jpg');
+        background-position: center bottom;
+    }
+    26%{
+        background-image: url('../media/slide2.jpg');
+        background-position: center bottom;
+    }
+    50%{
+        background-image: url('../media/slide2.jpg');
+        background-position: center top;
+    }
+    56%{
+        background-image: url('../media/slide3.jpg');
+        background-position: center top;
+    }
+    75%{
+        background-image: url('../media/slide3.jpg');
+        background-position: center bottom;
+    }
+    76%{
+        background-image: url('../media/slide4.jpg');
+        background-position: center bottom;
+    }
+    100%{
+        background-image: url('../media/slide4.jpg');
+        background-position: center top;
+    }
+}
+/* Home section */
+.home {
+    /*width: 100%;
+    height: 100vh;
+    background-image: url("https://midu.dev/images/wallpapers/dino-not-found-rainbow-4k-wallpaper.png");
+    background-position: center top;
+	background-size:cover;*/
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+        transition: all 0.4s ease;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-top: 10px;
+    }
+    .nav div.logo a img {
+        width: 200px;
+        height: 44px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.822);
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+    transition: all 0.4s ease;
+}
+
+.navTrigger i {
+    background-color: #000;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+
+.affix {
+    padding: 0;
+    background-color: #fff;
+}
+
+.myH2 {
+	text-align:center;
+	font-size: 4rem;
+}
+.myP {
+	text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 20px;
+}
+
+
+@media all and (max-width:700px){
+	.myP {
+		padding:2%;
+	}
+}
+.myH2 {
+	text-align:center;
+	font-size: 4rem;
+}
+.myP {
+	text-align: center;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 20px;
+}
+.myP2 {
+	text-align: center;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 30px;
+}
+
+.form-register{
+    width: 400px;
+    margin:auto;
+}
+
+.controls{
+    width: 100%;
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 15px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+}
+
+.controls2{
+    width: 105%;
+    height: 200px;
+    border-radius: 2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+}
+
+.button{
+    width: 40%;
+    height: 40px;
+    margin-left: 30%;
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+}
+
+.wlogo{
+    width: 40px;
+}
+
+@media all and (max-width:700px){
+	.myP {
+		padding:2%;
+	}
+    .myP2 {
+		padding:2%;
+	}
+}

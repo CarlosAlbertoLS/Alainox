@@ -1,0 +1,9 @@
+<div class="ae-grid au-xs-ta-center au-mb-4">
+    <div *ngFor="let equipo of _is.equipoh, index as i"
+          class="ae-grid__item item-lg-2 ae-kappa au-mb-3">
+      <a routerLink="./hogar"><img [src]="equipo.url" alt=""></a>
+      <h5 class="ae-u-bolder">{{equipo.nombre}}</h5>
+      <p class="ae-u-bolder">{{equipo.descripcion}}</p>
+      <p class="au-lg-ta-left au-pl-4 au-pr-4">{{equipo.fb}}</p>
+    </div>
+  </div>
